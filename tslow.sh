@@ -1,3 +1,6 @@
+
+[ -x ./tfast.sh ] && ./tfast.sh || exit 1
+
 UVDIR=venv
 WD=$PWD
 UVOPT=-q
@@ -9,14 +12,8 @@ uv run $UVOPT complexipy $WD/python/g*.py # || exit 1
 cd ..
 echo
 
-#uv run $UVOPT texttest -d . -con "$@"
 echo "~~~~~ TEXTTEST ~~~~~"
 $UVDIR/.venv/bin/texttest -d . -con "$@" #|| exit 1
-echo
-
-echo "~~~~~ UNIT TESTS ~~~~~"
-#python3 $WD/python/test_gilded_rose.py
-pytest $WD/python || exit 1
 echo
 
 echo "This is fine."

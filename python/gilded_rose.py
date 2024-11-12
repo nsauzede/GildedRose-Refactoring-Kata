@@ -23,7 +23,7 @@ class GildedRose(object):
             elif item.name in ["Backstage passes to a TAFKAL80ETC concert", "Sulfuras, Hand of Ragnaros"] :
                 self._update_quality(item)
             else:
-                #self.update_quality_normal(item)
+                # self.update_quality_normal(item)
                 self._update_quality(item)
 
     def _update_quality(self, item):
